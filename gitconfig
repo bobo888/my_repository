@@ -1,0 +1,35 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[user]
+    name = bobo
+    email = guozhishaonian@126.com
+[remote "origin"]
+	url = https://github.com/bobo888/my_repository.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[alias]
+	st = status
+	ci = commit
+	ck = checkout
+	df = difftool
+	br = branch
+	ml = mergetool
+[diff]
+    tool = bcomp
+[difftool "bcomp"]
+    cmd = \"/usr/bin/bcomp\" \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    prompt = false
+[merge]
+    tool = bcomp
+[mergetool]
+    prompt = false
+[mergetool "bcomp"]
+    cmd = \"/usr/bin/bcomp\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
